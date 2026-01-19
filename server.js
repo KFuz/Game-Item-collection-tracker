@@ -1,7 +1,7 @@
 // imports
 const express = require("express") //importing express package
 const app = express() // creates a express application
-const dotenv = require("dotenv").config() //this allows me to use my .env values in this file
+require("dotenv").config() //this allows me to use my .env values in this file
 const mongoose = require("mongoose")
 const morgan = require('morgan')
 const authController = require("./controllers/auth.js");
@@ -15,6 +15,7 @@ app.use(express.static('public')) // my app will serve all static files from pub
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
+
 // new
 app.use(
   session({
