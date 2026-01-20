@@ -4,7 +4,7 @@ const router = require("express").Router()
 
 
 router.get('/games',(req,res)=>{
-    res.render('mygames.ejs')
+    res.render('Games/mygames.ejs')
 })
 module.exports = router;
 
