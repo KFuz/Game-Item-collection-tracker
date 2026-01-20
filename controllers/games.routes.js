@@ -3,10 +3,9 @@ const Game = require("../models/Games");
 const router = require("express").Router()
 
 
-router.get('/games',(req,res)=>{
+router.get('/',(req,res)=>{
     res.render('Games/mygames.ejs')
 })
-module.exports = router;
 
 // add create game route
 // add create game form/ page
@@ -14,10 +13,19 @@ module.exports = router;
 // items list as well
 //add games details page
 
-// Show create games
-router.get("/create", async (req, res) => {
-  const games = await Game.find();
-  res.render("../views/Games/creategame.ejs", { games });
+// Show create games page & create games page
+
+router.get("/creategame", (req, res) => {
+  res.render('Games/creategame.ejs');
 });
 
+
+router.post('/createGame', async(req,res)=>{
+    req.body.creator = req.session.user_id
+    const createdGame = await Game.create(req.body)
+    res.redirect('/games/creategame')
+})
+
+
+module.exports = router
  

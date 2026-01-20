@@ -6,7 +6,7 @@ const gameSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  creator: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
 const Game = mongoose.model("Game", gameSchema);
