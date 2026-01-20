@@ -15,6 +15,7 @@ app.use(express.static('public')) // my app will serve all static files from pub
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
+app.set('view engine', 'ejs');
 
 // new
 app.use(

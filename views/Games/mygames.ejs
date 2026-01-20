@@ -9,6 +9,19 @@
     <%- include('../partials/navbar.ejs') %>
 
     <h1>Games</h1>
-
+    <hr>
+  <hr>
+  <ul>
+    <% allGames.forEach(function(game) { %>
+      <li>
+            <a href="/mygames/<%= game.gameName %>"><%= game.gameName%></a>
+      </li>
+    <% }) %>
+  </ul>
+  <Hr>
+  <a href="/games/creategame">Create New game</a>
+    <Hr>
+    <a href="/">Back to Home</a>
+  <hr>
 </body>
 </html>

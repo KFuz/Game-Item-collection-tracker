@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
 // Show create games page & create games page
 
 router.get("/creategame", (req, res) => {
-  res.render('Games/creategame.ejs');
+  res.render('games/creategame.ejs');
 });
 
 
@@ -26,6 +26,11 @@ router.post('/createGame', async(req,res)=>{
     res.redirect('/games/creategame')
 })
 
+router.get("/mygames", async (req, res) => {
+  const allGames = await Game.find();
+  res.render("games/mygames", {allGames:allGames});
+  console.log(allGames)
+});
 
 module.exports = router
  
