@@ -1,5 +1,6 @@
 const { route } = require("./auth");
 const Game = require("../models/Games");
+const Item = require("../models/Items");
 const router = require("express").Router()
 
 
@@ -7,11 +8,6 @@ router.get('/',(req,res)=>{
     res.render('Games/mygames.ejs')
 })
 
-// add create game route
-// add create game form/ page
-// add delete game form/page it should also delete items from 
-// items list as well
-//add games details page
 
 // Show create games page & create games page
 
@@ -34,6 +30,7 @@ router.get("/mygames", async (req, res) => {
 // delete
 router.post("/delete/:id",async(req,res)=>{
   await Game.findByIdAndDelete(req.params.id)
+  await Item.deledeMany({game:req.params.id})
     res.redirect('/Games/mygames')
 })
 // update

@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+      <%- include('../partials/navbar.ejs') %>
       <h1>Update game name <%= foundGame.gameName %></h1>
   <form action="/games/update/<%= foundGame._id %>" method="post">
         

@@ -11,6 +11,7 @@ const isSignedIn = require("./middleware/is-signed-in.js");
 const passUserToView = require("./middleware/pass-user-to-view.js");
 const methodOverride = require('method-override')
 const gamesController = require("./controllers/games.routes.js")
+const itemsController = require("./controllers/items.routes.js")
 app.use(express.static('public')) // my app will serve all static files from public folder
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
@@ -76,6 +77,7 @@ app.use(isSignedIn)
 
 app.use('/games',gamesController)
 
+app.use('/items',itemsController)
 
 
 

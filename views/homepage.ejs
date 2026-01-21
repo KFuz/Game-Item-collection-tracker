@@ -8,7 +8,7 @@
 <body>
     <%- include('./partials/navbar.ejs') %>
 
-    <h1>Welcome to my Website</h1>
+    <h1>Collection Log</h1>
 
 
 
@@ -16,10 +16,11 @@
 <div>
     <% if (user){ %>
         <a href="/games/createGame">Create games</a>
+         <a href="/items">items</a>
 
 
     <% } else{ %>
-    <h4> sign in peasent</h4>
+    <h3> sign in peasent or sign up either way find a way to log in</h3>
 
     <% } %>
 </div>
