@@ -14,10 +14,14 @@
   <ul>
     <% allGames.forEach(function(game) { %>
       <li>
-            <a href="/mygames/<%= game.gameName %>"><%= game.gameName%></a>
+        <a href="/mygames/<%= game.gameName %>"><%= game.gameName%></a>
+        <form action="/games/delete/<%= game._id %>" method="post">
+            <button>delete</button>
+        </form>
       </li>
     <% }) %>
-  </ul>
+
+ 
   <Hr>
   <a href="/games/creategame">Create New game</a>
     <Hr>

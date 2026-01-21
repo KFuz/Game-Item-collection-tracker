@@ -32,5 +32,10 @@ router.get("/mygames", async (req, res) => {
   console.log(allGames)
 });
 
+router.post("/delete/:id",async(req,res)=>{
+  await Game.findByIdAndDelete(req.params.id)
+    res.redirect('/Games/mygames')
+})
+
 module.exports = router
  
