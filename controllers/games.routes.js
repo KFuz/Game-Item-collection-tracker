@@ -30,7 +30,7 @@ router.get("/mygames", async (req, res) => {
 // delete
 router.post("/delete/:id",async(req,res)=>{
   await Game.findByIdAndDelete(req.params.id)
-  await Item.deledeMany({game:req.params.id})
+  await Item.deleteMany({game:req.params.id})
     res.redirect('/Games/mygames')
 })
 // update
@@ -44,6 +44,12 @@ router.post('/update/:id', async (req,res)=>{
  
  await Game.findByIdAndUpdate(req.params.id, req.body)
     res.redirect('/Games/mygames')
+})
+
+
+router.get('/:id', async(req,res)=>{
+    const items = await Item.find({gameName: req.params.id}).populate("gameName")
+    res.render('Games/gamedetails',{items: items})
 })
 
 module.exports = router
