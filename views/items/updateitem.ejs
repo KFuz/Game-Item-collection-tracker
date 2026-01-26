@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <%- include('../partials/navbar.ejs') %>
+      <h1>Update item <%= foundItem.itemName %></h1>
+  <form action="/items/update/<%= foundItem._id %>" method="post">
+        
+        <label for="name">Name:</label>
+        <input name="itemName" type="text" value="<%=foundItem.itemName%>">
+
+         <label for="name">Rarity:</label>
+        <input name="itemRarity" type="text" value="<%=foundItem.itemRarity%>">
+
+        <button>update</button>
+        </form>
+</body>
+</html>

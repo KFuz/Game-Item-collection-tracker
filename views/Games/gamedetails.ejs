@@ -9,15 +9,24 @@
     <h1>Game details</h1>
 
 
-    <p><%= items[0].gameName.gameName%></p>
+    <h2><%= items[0].gameName.gameName%></h2>
+   <ul>
    
     <% items.forEach((oneItem)=>{ %>
     <p>Item Name: <%= oneItem.itemName %></p>
-     <p>Rarity: <%= oneItem.itemRarity %></p>
+          
+    <p>Rarity: <%= oneItem.itemRarity %></p>
+
+
+            <a href="/items/update/<%= oneItem._id %>">Edit item</a>
+
+
 
     <% }) %>
 
 
+    
+</ul>
 
     
 

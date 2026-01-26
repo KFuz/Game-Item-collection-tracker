@@ -30,20 +30,21 @@ router.get("/myitems", async (req, res) => {
 });
 // delete
 router.post("/delete/:id",async(req,res)=>{
-  await Item.findByIdAndDelete(req.params.id)
-    res.redirect('/items/myitems')
+  await Item.findByIdAndDelete(req.params.id,req.body).populate("gameName")
+    res.redirect(`/games/${item.gameName._id}`)
 })
 // update
 
 router.get('/update/:id', async(req,res)=>{
- const foundGame = await Game.findById(req.params.id)
-res.render('items/updateitem.ejs',{foundGame: foundGame})
+    console.log(req.params.id)
+const foundItem = await Item.findById(req.params.id)
+res.render('items/updateitem.ejs',{foundItem: foundItem})
  })
 
 router.post('/update/:id', async (req,res)=>{
  
- await Item.findByIdAndUpdate(req.params.id, req.body)
-    res.redirect('/items/myitems')
+ const item = await Item.findByIdAndUpdate(req.params.id, req.body).populate("gameName")
+    res.redirect(`/games/${item.gameName._id}`)
 })
 
 
