@@ -30,7 +30,7 @@ router.get("/myitems", async (req, res) => {
 });
 // delete
 router.post("/delete/:id",async(req,res)=>{
-  await Item.findByIdAndDelete(req.params.id,req.body).populate("gameName")
+  const item =  await Item.findByIdAndDelete(req.params.id,req.body).populate("gameName")
     res.redirect(`/games/${item.gameName._id}`)
 })
 // update
