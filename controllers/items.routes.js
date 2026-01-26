@@ -11,14 +11,15 @@ router.get('/',(req,res)=>{
 
 //item create
 
-router.get("/createitem", (req, res) => {
-  res.render('items/createitem.ejs');
+router.get("/createitem", async(req, res) => {
+const allGames = await Game.find() 
+  res.render('items/createitem.ejs',{allGames:allGames});
 });
 
 
 router.post('/createitem', async(req,res)=>{
     req.body.creator = req.session.user_id
-    const createdGame = await Game.create(req.body)
+    const createdItem = await Item.create(req.body)
     res.redirect('/items/createitem')
 })
 //list all 

@@ -12,7 +12,7 @@ const itemSchema = new mongoose.Schema({
 
   },
   
-  game: { type: mongoose.Schema.Types.ObjectId, ref: 'Game' },
+  gameName: { type: mongoose.Schema.Types.ObjectId, ref: 'Game' },
 
 });
 

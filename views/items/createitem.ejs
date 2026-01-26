@@ -9,6 +9,27 @@
     <h1>
         create item
     </h1>
+
+
+    <form action="/items/createitem" method="post">
+        <label for="itemName">Item name</label>
+        <input id="itemName" name="itemName" type="text">
+
+        <label for="itemRarity">Item Rarity: </label>
+        <input name="itemRarity" id=" itemRarity" type="text">
+
+        <select name="gameName" id="">
+            <% allGames.forEach((oneGame)=>{ %>
+                <!-- value should always be the _id -->
+                <option value="<%= oneGame._id %>"><%= oneGame.gameName %></option>
+            <% }) %>
+  
+        </select>
+
+        <button>Create Item</button>
+
+    </form>
+    
     
 </body>
 </html>
