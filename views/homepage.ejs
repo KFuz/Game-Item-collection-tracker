@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+
 </head>
 <body>
     <%- include('./partials/navbar.ejs') %>
@@ -15,9 +17,8 @@
 <hr>
 <div>
     <% if (user){ %>
-        <a href="/games/createGame">Create games</a>
-      <hr>  
-         <a href="/items">items</a>
+        <a href="/games/createGame" class="button">Create games</a>
+
 
 
     <% } else{ %>
@@ -25,9 +26,9 @@
 
     <% } %>
 <hr>
-      <a href="/Games/mygames">All games</a>
+      <a href="/Games/mygames" class="button">All games</a>
      <hr>
-      <a href="/items/createitem"> create item</a>
+      <a href="/items/createitem" class="button"> Create item</a>
 </div>
 </body>
 </html>
