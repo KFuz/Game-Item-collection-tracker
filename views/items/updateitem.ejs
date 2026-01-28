@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Item</title>
         <link rel="stylesheet" href="/css/homepage.css">
 
 </head>
 <body>
       <%- include('../partials/navbar.ejs') %>
-      <h1>Update item <%= foundItem.itemName %></h1>
+      <h1>Update <%= foundItem.itemName %></h1>
   <form action="/items/update/<%= foundItem._id %>" method="post">
         
         <label for="name">Name:</label>
@@ -20,5 +20,8 @@
 
         <button>update</button>
         </form>
+
+
+            <a href="/" class="lowbutton">Back to Home</a>
 </body>
 </html>

@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My games</title>
         <link rel="stylesheet" href="/css/mygames.css">
 
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
 
-    <h1>Games</h1>
-    <hr>
-  <hr>
+    <h1>My Games</h1>
+    
+  
   <ul>
     <% allGames.forEach(function(game) { %>
       <li>
           <h2><%= game.gameName %></h2>
       
-        <a href="/games/<%= game._id %>"class="button">See Details</a>
+        <a href="/games/<%= game._id %>"class="navbutton">Items</a>
       
         <form action="/games/delete/<%= game._id %>" method="post">
             <button>delete</button>
         </form>
-            <a href="/games/update/<%= game._id %>"class="button">Edit game</a>
+            <a href="/games/update/<%= game._id %>"class="editbutton">Edit game</a>
 
       </li>
     <% }) %>
 
- 
-  <Hr>
-  <a href="/games/creategame" class="button">Create New game</a>
-    <Hr>
-    <a href="/"class="button">Back to Home</a>
-  <hr>
+ <br><br><br>
+  
+  <a href="/games/creategame" class="lowbutton">Create New game</a>
+    
+    <a href="/"class="lowbutton">Back to Home</a>
+  
 </body>
 </html>

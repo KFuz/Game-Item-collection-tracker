@@ -1,21 +1,19 @@
 
 
-/* The Button Styling */
 .button {
-    display: inline-block;    /* Allows padding and height */
-    text-decoration: none;    /* Removes the underline */
-    padding: 5px 10px;       /* Vertical and Horizontal space */
+    display: inline-block;    
+    text-decoration: none;   
+    padding: 5px 10px;      
     background-color: #342C1F;
-    color: white;             /* Text color */
-    border-radius: 5px;       /* Rounded corners */
+    color: white;       
+    border-radius: 5px;      
     font-family: sans-serif;
     font-weight: 600;
-    transition: background 0.2s ease; /* Smooth hover effect */
+    transition: background 0.2s ease; 
     border: none;
     cursor: pointer;
 }
 
-/* Hover effect */
 .button:hover {
     background-color:#000000;
 ;

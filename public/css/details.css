@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: #333;
+      background-image: url("/images/background.png");
 }
 h1 {
     text-align: center;
@@ -19,13 +20,26 @@ h2 {
     color: #ffffff;
 }
 
-p{
-     text-align: left;
+h3 {
+    text-align: center;
     margin-top: 50px;
     color: #ffffff;
 }
 
-/* 3. Form Elements */
+
+h4 {
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffff;
+}
+p{
+    text-align: left;
+    margin-top: 50px;
+
+    color: #ffffff;
+}
+
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -33,48 +47,126 @@ label {
     font-size: 0.9rem;
 }
 
-
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
 
 input:focus {
     outline: none;
     border-color: #000000;
 }
 
-/* 4. Button Styling */
 button {
-    width: 100;
-    padding: 8px 24px;
-    background-color: #342C1F;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 4px;
-}
 
-.button {
-    width: 100px;
-    padding: 8px 24px;
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
     background-color: #342C1F;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     font-weight: bold;
+    text-align: center;
     cursor: pointer;
+    margin: 1em;
     transition: background-color 0.3s ease;
-    margin-top: 2px;
-    margin: auto;
+    text-decoration:none;
 }
 
 button:hover {
-    background-color: #080000;
+    background-color:#000000;
+;
+    color: #ffffff;
 }
 
-/* 5. Small cleanup for the <br> tags */
-br {
-    display: none; /* We use margins now for better spacing */
+
+.button:hover {
+    background-color:#000000;
+;
+    color: #ffffff;
+}
+.navbutton:hover {
+    background-color:#000000;
+;
+    color: #ffffff;
+}
+
+.lowbutton:hover {
+    background-color:#000000;
+;
+    color: #ffffff;
+}
+
+.editbutton:hover {
+    background-color:#000000;
+;
+    color: #ffffff;
+}
+
+
+.navbutton {
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #342C1F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration:none;
+}
+
+
+.editbutton {
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #342C1F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration:none;
+}
+
+.lowbutton {
+       
+    display: inline-block;  
+    align-items: auto;
+  justify-content: auto;
+    cursor: pointer;
+    width: 8em;
+    padding: 10px;
+    background-color: #342C1F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration:none;
 }

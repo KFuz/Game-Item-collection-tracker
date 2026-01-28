@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game items</title>
         <link rel="stylesheet" href="/css/details.css">
 
 </head>
 <body>
-    <h1>Game details</h1>
+    <h1>Game items</h1>
 
 
     <h2><%= items[0].gameName.gameName%></h2>
@@ -20,7 +20,7 @@
     <p>Rarity: <%= oneItem.itemRarity %></p>
 
 
-            <a href="/items/update/<%= oneItem._id %>"class="button">Edit item</a>
+            <a href="/items/update/<%= oneItem._id %>"class="editbutton">Edit item</a>
 
         <form action="/items/delete/<%= oneItem._id %>" method="post">
             <button>delete</button>
@@ -32,7 +32,7 @@
 </ul>
 
     
-    <a href="/"class="button">Back to Home</a>
+    <a href="/"class="lowbutton">Back to Home</a>
 
 </body>
 </html>
